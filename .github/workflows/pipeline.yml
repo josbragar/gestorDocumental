@@ -1,4 +1,4 @@
-name: Pipeline examen josbragar bueno
+name: Pipeline examen josbragar
 on:
   push:
     branches:
