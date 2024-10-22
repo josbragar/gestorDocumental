@@ -50,6 +50,16 @@ class TestPlantillaWord {
 	        assertEquals(wordDocument.convertTextFileToString("parrafo.txt"), paragraphs.get(2).getText());
 	       
 	    }
+
+	@Test
+	public void whenSubtitleHasNotCorrectSize_16() throws Exception {
+		Path msWordPath = Paths.get("Quijote.docx");
+		logger.info("path ",msWordPath);
+		XWPFDocument document = new XWPFDocument(Files.newInputStream(msWordPath));
+		List<XWPFParagraph> paragraphs = document.getParagraphs();
+		document.close();
+		assertEquals(16, paragraphs.get(1).getRuns().get(0).getFontSize());
+	}
 	}
 
 
