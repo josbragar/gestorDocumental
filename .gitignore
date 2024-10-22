@@ -1,0 +1,9 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+*.docx
+
+# Estoy empleando Intellij y este crea los archivos de configuración de IDE .idea
+.idea
+
+# Ignore Gradle build output directory
+build
